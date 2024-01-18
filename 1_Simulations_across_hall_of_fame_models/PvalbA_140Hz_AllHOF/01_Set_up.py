@@ -206,7 +206,7 @@ for i in range(0,16):
         fout.write(line)
     fout.close()
 
-
+#Correct gather data header
 lines = []
 fin = open('./02_Gather_Data.py', "rt")
 cnt = 0
