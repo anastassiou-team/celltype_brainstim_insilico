@@ -13,7 +13,8 @@
 
 * Directory **2_Cell_calibration_and_conductance_correlation** contains all necessary data, algorithms, and results for main **Figure 5 c**, and supplementary **Figure S8**.
 
-> Most simulations are configured to run on a separate drive and will seek for path **R:\Temp** to exist. (Optionally you can set it as a **RAM drive** - see https://sourceforge.net/projects/imdisk-toolkit/).
+> Most simulations are configured to run on a separate drive and will seek for path **R:\Temp** to exist.<br />
+> (Optionally you can set it as a **RAM drive** - see https://sourceforge.net/projects/imdisk-toolkit/).
 ***
 
 Parameter files for mouse cells were developed by **A. Nandi et all. (2022)**<br />
