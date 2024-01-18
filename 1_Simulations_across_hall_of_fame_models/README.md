@@ -1,5 +1,5 @@
 # Necessary data, algorithms, and results for main **Figure 5 a-b**, and supplementary **Figure S8**.
-***
+
 ### Contents
 * **Six almost identical directories** for the two cell types used (**3 for Pvalb A and 3 for Pyramidal A**), each containing the following:
     * **Plots** directory contains the *04_Plot_results.py* script which creates low-level rose-plots for each simulation, as well as the created figures. For the two cases where all hall of fame models are simulated (see below), this script will also export vector-length metrics across models in *Results* directory.
