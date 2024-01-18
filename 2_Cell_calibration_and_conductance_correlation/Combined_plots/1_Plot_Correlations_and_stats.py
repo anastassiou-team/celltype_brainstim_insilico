@@ -21,6 +21,7 @@ signalInd = 0
 
 #PVALBA
 vls=[]
+#Gather vector length values
 for hof in range(1):
     data_exist = []
     Spike_Start = []
@@ -187,6 +188,7 @@ fig.tight_layout()
 pp.savefig(fig)
 pp.close()
 
+#Gather conductance values
 rows = []
 first_run = 1
 for ii, name in enumerate(range(40)):
@@ -337,6 +339,7 @@ for ii in range(0,40):
             
 df = pd.DataFrame(rows[1:], columns=rows[0])
 
+#Correlation
 sn.set(font_scale=1.0)
 sn.set(style="ticks")
 def calculate_pvalues(df):
@@ -370,6 +373,7 @@ for i in indices:
 fig.tight_layout()
 plt.savefig("./1_CorrelationsPVA.pdf", format="pdf", bbox_inches="tight")
 
+#Create conductance distribution heatmap
 a = df.iloc[-40:,:].reset_index()
 a.drop(['ra', 'Width', 'cm_axon', 'cm_soma', 'cm_dend', 'e_pas', 'junction_potential', 'ena_soma', 'ek_soma', 'ena_axon', 'ek_axon','ena_dend', 'ek_dend', 'v_init', 'g_pas_apic', 'g_pas_dend', 'g_pas_soma', 'g_pas_axon'],axis = 1, inplace = True)
 strings1 = a.columns[:2]
@@ -403,6 +407,7 @@ plt.savefig("./1_ConductancesPVA.pdf", format="pdf", bbox_inches="tight")
 
 #PVALBB
 vls=[]
+#Gather vector length values
 for hof in range(1):
     data_exist = []
     Spike_Start = []
@@ -569,6 +574,7 @@ fig.tight_layout()
 pp.savefig(fig)
 pp.close()
 
+#Gather conductance values
 rows = []
 first_run = 1
 for ii, name in enumerate(range(40)):
@@ -719,6 +725,7 @@ for ii in range(0,40):
             
 df = pd.DataFrame(rows[1:], columns=rows[0])
 
+#Correlation
 sn.set(font_scale=1.0)
 sn.set(style="ticks")
 def calculate_pvalues(df):
@@ -752,6 +759,7 @@ for i in indices:
 fig.tight_layout()
 plt.savefig("./1_CorrelationsPVB.pdf", format="pdf", bbox_inches="tight")
 
+#Create conductance distribution heatmap
 a = df.iloc[-40:,:].reset_index()
 a.drop(['ra', 'Width', 'cm_axon', 'cm_soma', 'cm_dend', 'e_pas', 'junction_potential', 'ena_soma', 'ek_soma', 'ena_axon', 'ek_axon','ena_dend', 'ek_dend', 'v_init', 'g_pas_apic', 'g_pas_dend', 'g_pas_soma', 'g_pas_axon'],axis = 1, inplace = True)
 strings1 = a.columns[:2]
@@ -794,6 +802,7 @@ signalInd = 0
 
 #PYRAMIDALA
 vls=[]
+#Gather vector length values
 for hof in range(1):
     data_exist = []
     Spike_Start = []
@@ -959,6 +968,7 @@ fig.tight_layout()
 pp.savefig(fig)
 pp.close()
 
+#Gather conductance values
 rows = []
 first_run = 1
 for ii, name in enumerate(range(40)):
@@ -1109,6 +1119,7 @@ for ii in range(0,40):
             
 df = pd.DataFrame(rows[1:], columns=rows[0])
 
+#Correlation
 sn.set(font_scale=1.0)
 sn.set(style="ticks")
 def calculate_pvalues(df):
@@ -1141,6 +1152,7 @@ for i in indices:
 fig.tight_layout()
 plt.savefig("./1_CorrelationsPYA.pdf", format="pdf", bbox_inches="tight")
 
+#Create conductance distribution heatmap
 a = df.iloc[-40:,:].reset_index()
 a.drop(['ra','Width', 'cm_axon', 'cm_soma', 'cm_dend', 'cm_apic', 'e_pas', 'junction_potential', 'ena_soma', 'ek_soma','ena_apic', 'ek_apic', 'ena_axon', 'ek_axon','ena_dend', 'ek_dend', 'v_init', 'g_pas_apic', 'g_pas_dend', 'g_pas_soma', 'g_pas_axon'],axis = 1, inplace = True)
 strings1 = a.columns[:2]
@@ -1174,6 +1186,7 @@ plt.savefig("./1_ConductancesPYA.pdf", format="pdf", bbox_inches="tight")
 
 #PYRAMIDALB
 vls=[]
+#Gather vector length values
 for hof in range(1):
     data_exist = []
     Spike_Start = []
@@ -1339,6 +1352,7 @@ fig.tight_layout()
 pp.savefig(fig)
 pp.close()
 
+#Gather conductance values
 rows = []
 first_run = 1
 for ii, name in enumerate(range(40)):
@@ -1489,6 +1503,7 @@ for ii in range(0,40):
             
 df = pd.DataFrame(rows[1:], columns=rows[0])
 
+#Correlation
 sn.set(font_scale=1.0)
 sn.set(style="ticks")
 def calculate_pvalues(df):
@@ -1522,6 +1537,7 @@ for i in indices:
 fig.tight_layout()
 plt.savefig("./1_CorrelationsPYB.pdf", format="pdf", bbox_inches="tight")
 
+#Create conductance distribution heatmap
 a = df.iloc[-40:,:].reset_index()
 a.drop(['ra','Width', 'cm_axon', 'cm_soma', 'cm_dend', 'cm_apic', 'e_pas', 'junction_potential', 'ena_soma', 'ek_soma','ena_apic', 'ek_apic', 'ena_axon', 'ek_axon','ena_dend', 'ek_dend', 'v_init', 'g_pas_apic', 'g_pas_dend', 'g_pas_soma', 'g_pas_axon'],axis = 1, inplace = True)
 strings1 = a.columns[:2]
