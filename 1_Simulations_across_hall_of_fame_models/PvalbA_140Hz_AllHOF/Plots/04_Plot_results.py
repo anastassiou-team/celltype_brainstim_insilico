@@ -22,6 +22,7 @@ yysC=[]
 vls=[]
 crnts=[]
 
+# Locate spikes
 for hof in range(0,40):
     data_exist = []
     Spike_Start = []
@@ -92,6 +93,8 @@ for hof in range(0,40):
     ax.plot(50,0,'x')
     pp.savefig(fig)
     plt.close(fig)
+    
+    # Find ES corresponding phase for each spike
     Phase_lists = []
     Co_rose = []
     En_rose = []
@@ -107,6 +110,7 @@ for hof in range(0,40):
     
     for i, cl in enumerate(data_exist):
         if (len(Phase_lists[i*2])>0) and (len(Phase_lists[i*2+1])>0):
+            #Create control rose hist
             radians = np.asarray(Phase_lists[i*2])*np.pi/180
             mean_phase_rad = pycircstat.descriptive.mean(np.array(radians))
             mean_phase_angle = mean_phase_rad*(180 / np.pi)
@@ -141,8 +145,7 @@ for hof in range(0,40):
             result.append(cl)
             results.append(result)
             
-            
-            
+            #Create entrained rose hist
             radians = np.asarray(Phase_lists[i*2+1])*np.pi/180
             mean_phase_rad = pycircstat.descriptive.mean(np.array(radians))
             mean_phase_angle = mean_phase_rad*(180 / np.pi)
@@ -177,7 +180,8 @@ for hof in range(0,40):
             result.append((len(Phase_lists[i*2+1])/len(en)*10000))
             result.append(cl)
             results.append(result)
-            
+    
+    #Create collective control rose hist    
     radians = np.asarray(Co_rose)*np.pi/180
     mean_phase_rad = pycircstat.descriptive.mean(np.array(radians))
     mean_phase_angle = mean_phase_rad*(180 / np.pi)
@@ -211,9 +215,8 @@ for hof in range(0,40):
     result.append((len(Co_rose)/len(co)*10000))
     result.append(0)
     results.append(result)
-    
-    
-    
+ 
+    #Create collective entrained rose hist
     radians = np.asarray(En_rose)*np.pi/180
     mean_phase_rad = pycircstat.descriptive.mean(np.array(radians))
     mean_phase_angle = mean_phase_rad*(180 / np.pi)
@@ -250,6 +253,7 @@ for hof in range(0,40):
     results.append(result)
     vls.append(round(mean_vector_length,3))
     
+    #Export vector length metrics across hall of fame (hof) models
     ddf = pd.DataFrame(results[1:], columns=results[0])
     fig, ax = plt.subplots()
     fig.patch.set_visible(False)
@@ -261,11 +265,9 @@ for hof in range(0,40):
     fig.tight_layout()
     pp.savefig(fig)
     plt.close(fig)
-    
     group = ddf.groupby("Setup")
     control = group.get_group('Control')
     entrain = group.get_group('Entrain')
-
     xxs.append(control['Spike rate'].astype(float))
     crnts.append(control['Current'].astype(float))
     yys.append(entrain['Mean vector length'])

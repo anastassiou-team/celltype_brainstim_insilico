@@ -16,6 +16,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 import neurom as nm
 from neurom import viewer
 
+# Locate spikes
 for hof in range(0,1):
     data_exist = []
     Spike_Start = []
@@ -86,6 +87,8 @@ for hof in range(0,1):
     ax.plot(50,0,'x')
     pp.savefig(fig)
     plt.close(fig)
+    
+    # Find ES corresponding phase for each spike
     Phase_lists = []
     for i in Spike_Start:
         Phase_list = []
@@ -95,6 +98,7 @@ for hof in range(0,1):
     
     for i, cl in enumerate(data_exist):
         if (len(Phase_lists[i*2])>0) and (len(Phase_lists[i*2+1])>0):
+            #Create control rose hist
             radians = np.asarray(Phase_lists[i*2])*np.pi/180
             mean_phase_rad = pycircstat.descriptive.mean(np.array(radians))
             mean_phase_angle = mean_phase_rad*(180 / np.pi)
@@ -125,7 +129,8 @@ for hof in range(0,1):
             result.append((len(Phase_lists[i*2])/len(co)*10000))
             result.append(cl)
             results.append(result)
-
+            
+            #Create entrained rose hist
             radians = np.asarray(Phase_lists[i*2+1])*np.pi/180
             mean_phase_rad = pycircstat.descriptive.mean(np.array(radians))
             mean_phase_angle = mean_phase_rad*(180 / np.pi)
