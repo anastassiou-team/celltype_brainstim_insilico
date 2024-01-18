@@ -1,5 +1,5 @@
 # Necessary data, algorithms and results for main **Figure 5 c**, and supplementary **Figure S9**.
-***
+
 ### Contents
 * **Four almost identical directories** for the 2 Pvalb and 2 Pyramidal cells used (**Pvalb A, Pvalb B,
 Pyramidal A, Pyramidal B**), each containing the following:
