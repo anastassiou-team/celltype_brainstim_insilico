@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.backends.backend_pdf import PdfPages
 
+#pvalb
 spikrate = pd.read_csv('../PvalbA_140Hz_AllHOF/Results/xxs.csv')
 current = pd.read_csv('../PvalbA_140Hz_AllHOF/Results/crnts.csv')
 veclengs = pd.read_csv('../PvalbA_140Hz_AllHOF/Results/yys.csv')
@@ -18,6 +19,7 @@ for r in range(len(spikrate)):
 
 pp = PdfPages('./2_Across_HOF.pdf')
 
+# 2Hz moving average binning
 for binsize in range (2,3):
     xs1 = []
     ys1 = []
@@ -79,6 +81,7 @@ ax.spines['top'].set_visible(False)
 fig.tight_layout()
 pp.savefig(fig)
 
+#pyramidal
 spikrate = pd.read_csv('../PyramidalA_8Hz_AllHOF/Results/xxs.csv')
 current = pd.read_csv('../PyramidalA_8Hz_AllHOF/Results/crnts.csv')
 veclengs = pd.read_csv('../PyramidalA_8Hz_AllHOF/Results/yys.csv')
@@ -92,6 +95,7 @@ for r in range(len(spikrate)):
             veclengs.iloc[r,c] = np.nan
             veclengctrl.iloc[r,c] = np.nan
 
+# 2Hz moving average binning
 for binsize in range (2,3):
     xs1 = []
     ys1 = []

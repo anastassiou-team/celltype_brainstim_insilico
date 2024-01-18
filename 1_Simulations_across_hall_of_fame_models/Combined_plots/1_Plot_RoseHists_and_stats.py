@@ -27,6 +27,7 @@ listC = []
 listD = []
 listE = []
 
+#Create rose histograms
 for pth in range(len(paths4)):    
     hof = 0
     data_exist = []
@@ -192,6 +193,7 @@ fig1.tight_layout()
 pp.savefig(fig)
 pp.savefig(fig1)
 
+#Plot vector length metrics
 a = ['Control', '8 Hz', '30 Hz', '140 Hz']
 pvb = [np.mean(listB)]
 pvb.append(listC[0])
@@ -251,6 +253,7 @@ listC = []
 listD = []
 listE = []
 
+#Create rose histograms
 for pth in range(len(paths1)):    
     hof = 0
     data_exist = []
@@ -417,6 +420,7 @@ fig1.tight_layout()
 pp.savefig(fig)
 pp.savefig(fig1)
 
+#Plot vector length metrics
 pyr = [np.mean(listB)]
 pyr.append(listC[0])
 pyr.append(listC[1])
