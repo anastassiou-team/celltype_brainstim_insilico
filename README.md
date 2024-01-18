@@ -1,6 +1,6 @@
 #### *Results and algorithms for computational investigation presented in:*
 # "Cell class-specific electric field entrainment of neural activity"
-***
+
 > Developed in **Windows 10**, **Python 3.10.11**, **BMTK 1.0.7** and **NEURON 8.2.2**<br />
 > https://www.python.org/<br />
 > https://alleninstitute.github.io/bmtk/<br />
