@@ -1,0 +1,18 @@
+2024-01-15 13:34:03,495 [INFO] Created log file
+2024-01-15 13:34:03,535 [INFO] Building cells.
+2024-01-15 13:34:03,675 [INFO] Building recurrent connections
+2024-01-15 13:34:03,690 [INFO] Running simulation for 4000.000 ms with the time step 0.100 ms
+2024-01-15 13:34:03,690 [INFO] Starting timestep: 0 at t_sim: 0.000 ms
+2024-01-15 13:34:03,690 [INFO] Block save every 5000 steps
+2024-01-15 13:34:06,317 [INFO]     step:5000 t_sim:500.00 ms
+2024-01-15 13:34:08,944 [INFO]     step:10000 t_sim:1000.00 ms
+2024-01-15 13:34:11,497 [INFO]     step:15000 t_sim:1500.00 ms
+2024-01-15 13:34:14,040 [INFO]     step:20000 t_sim:2000.00 ms
+2024-01-15 13:34:16,614 [INFO]     step:25000 t_sim:2500.00 ms
+2024-01-15 13:34:19,211 [INFO]     step:30000 t_sim:3000.00 ms
+2024-01-15 13:34:21,770 [INFO]     step:35000 t_sim:3500.00 ms
+2024-01-15 13:34:24,312 [INFO]     step:40000 t_sim:4000.00 ms
+2024-01-15 13:34:24,329 [INFO] Simulation completed in 20.64 seconds 
+2024-01-15 13:34:52,570 [INFO] Created log file
+2024-01-15 13:34:52,580 [WARNING] Unable to load NEURON mechanisms.
+2024-01-15 13:34:52,590 [INFO] Building cells.

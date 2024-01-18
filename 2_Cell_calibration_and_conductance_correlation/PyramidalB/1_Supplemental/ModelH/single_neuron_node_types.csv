@@ -1,0 +1,2 @@
+node_type_id model_processing dynamics_params model_type morphology potental model_template cell_name
+100 aibs_perisomatic hof_param_354190013_0.json biophysical Cell_rotated.swc exc ctdb:Biophys1.hoc Cell_354190013

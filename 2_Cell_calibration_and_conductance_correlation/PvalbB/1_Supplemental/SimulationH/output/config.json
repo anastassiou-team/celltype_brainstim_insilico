@@ -1,0 +1,78 @@
+{
+  "network": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\circuit_config.json",
+  "simulation": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\simulation_config.json",
+  "config_path": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\config.json",
+  "config_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH",
+  "components": {
+    "biophysical_neuron_models_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\components\\biophysical_neuron_models",
+    "filter_models_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\components\\filter_models",
+    "mechanisms_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\components\\mechanisms",
+    "morphologies_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\components\\morphologies",
+    "point_neuron_models_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\components\\point_neuron_models",
+    "synaptic_models_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\components\\synaptic_models",
+    "templates_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\components\\templates",
+    "__pycache___dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\components\\__pycache__"
+  },
+  "networks": {
+    "nodes": [
+      {
+        "nodes_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\ModelH\\single_neuron_nodes.h5",
+        "node_types_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\ModelH\\single_neuron_node_types.csv"
+      }
+    ],
+    "edges": [],
+    "gap_juncs": []
+  },
+  "target_simulator": "NEURON",
+  "run": {
+    "tstart": 0.0,
+    "tstop": 4000.0,
+    "dt": 0.1,
+    "dL": 20.0,
+    "spike_threshold": -15.0,
+    "nsteps_block": 5000
+  },
+  "conditions": {
+    "celsius": 34.0,
+    "v_init": -80.0
+  },
+  "inputs": {
+    "current_clamp": {
+      "input_type": "current_clamp",
+      "module": "IClamp",
+      "node_set": "all",
+      "gids": "all",
+      "amp": 0.51,
+      "delay": 1000.0,
+      "duration": 1000.0
+    }
+  },
+  "output": {
+    "log_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\output\\log.txt",
+    "output_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\output",
+    "spikes_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\output\\spikes.h5"
+  },
+  "reports": {
+    "v_report": {
+      "variable_name": "v",
+      "cells": "all",
+      "module": "membrane_report",
+      "sections": "soma"
+    },
+    "cai_report": {
+      "variable_name": "cai",
+      "cells": "all",
+      "module": "membrane_report",
+      "sections": "soma"
+    }
+  },
+  "node_sets_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PvalbB\\1_Supplemental\\SimulationH\\node_sets.json",
+  "node_sets": {
+    "biophysical_nodes": {
+      "model_type": "biophysical"
+    },
+    "point_nodes": {
+      "model_type": "point_process"
+    }
+  }
+}
