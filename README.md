@@ -17,7 +17,7 @@
 > (Optionally you can set it as a **RAM drive** - see https://sourceforge.net/projects/imdisk-toolkit/).
 ***
 
-Parameter files for mouse cells were developed by **A. Nandi et all. (2022)**<br />
+Parameter files for rodent cells were developed by **A. Nandi et all. (2022)**<br />
 https://pubmed.ncbi.nlm.nih.gov/35947954/<br />
 https://github.com/anastassiou-team/Nandi_EtAl_All-Active_Paper/tree/master
 
