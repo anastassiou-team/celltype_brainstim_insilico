@@ -10,7 +10,7 @@
 * **Combined_plots** directory contains scripts for the final figures' creation and the corresponding created figures (**Script name** - Description - ***Output figure file***).
     * **0_Plot traces.py** - Plots spiking traces as shown in main *Figure 5 a* - ***0_Traces.pdf***
     * **1_Plot_RoseHists_and_stats.py** - Plots rose histograms as shown in main *Figure 5 a* and supplementary *Figure S9 a-b*, as well as ISI distributions as shown in main *Figure 5 a*, and vector-length/p-value plots as shown in supplementary *Figure S9 a-b* - ***1_RoseHists_and_stats.pdf***
-    * **2_Plot_across_HOF.py** - Plots vector-length vs spike-rate figures as shown in main *Figure 5 b* and supplementary *Figure S9 c-d*, as well as spike-rate vs injected current figures as shown in supplementary *Figure S9 c-d* - ***2_Across_HOF.pdf***
+    * **2_Plot_across_HOF.py** - Plots vector-length vs spike-rate figures as shown in main *Figure 5 b (top)* and supplementary *Figure S9 c-d*, as well as spike-rate vs injected current figures as shown in supplementary *Figure S9 c-d* - ***2_Across_HOF.pdf***
 ***
 **MultiRun.bat** windows batch file is the main script which will set and run all simulations.
 * For **Pvalb A** at **8** and **30 Hz**, *333* simulations will run for different intracellular current injections (200-1200 pA, step = 3 pA), x2 with and without ES, only for *hall of fame model #0*.

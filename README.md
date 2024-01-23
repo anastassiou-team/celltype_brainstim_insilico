@@ -11,7 +11,7 @@
 
 * Directory **1_Simulations_across_hall_of_fame_models** contains all necessary data, algorithms, and results for main **Figure 5 a-b**, and supplementary **Figure S9**.
 
-* Directory **2_Cell_calibration_and_conductance_correlation** contains all necessary data, algorithms, and results for main **Figure 5 c**, and supplementary **Figure S8**.
+* Directory **2_Cell_calibration_and_conductance_correlation** contains all necessary data, algorithms, and results for main **Figure 5 b-c**, and supplementary **Figure S8**.
 
 > Most simulations are configured to run on a separate drive and will seek for path **R:\Temp** to exist.<br />
 > (Optionally you can set it as a **RAM drive** - see https://sourceforge.net/projects/imdisk-toolkit/).
