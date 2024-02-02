@@ -178,7 +178,7 @@ for hof in range(0,1):
     ax1.plot(co.index/10,co.iloc[:,0]+50, linewidth=2, color = '#009B81')
     ax1.set_xlabel('Time (ms)', fontsize = 14)
     ax1.set_title('Membrane potential 140Hz ES', fontsize = 14)
-    ax1.plot(co.index/10+980,en.iloc[:,0]+50, linewidth=2, color = '#009B81')
+    ax1.plot(co.index/10+980,en.iloc[:,0]+45, linewidth=2, color = '#009B81')
     ax1.set_xlabel('1mV 25mV 250ms 25ms', fontsize = 14)
     ax1.set_title('Extracellular current', fontsize = 14)
     ax1.plot(co.index/10+980,en['Reference']*100000+160, linewidth=2, color = 'grey')

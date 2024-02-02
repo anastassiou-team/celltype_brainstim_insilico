@@ -7,7 +7,7 @@ import pandas as pd
 resultsMean = []
 resultsStd = []
 for i in range(40):
-    base_name = 'R:/Temp/Threads2/Thread'+str(i)+'/Simulation/output/Data.csv'
+    base_name = 'R:/Temp/Threads16/Thread'+str(i)+'/Simulation/output/Data.csv'
     df = pd.read_csv(base_name)
     if df.iloc[0,0]>1000:
         resultsMean.append(0)
@@ -30,8 +30,8 @@ for i in range(40):
             vdf.iloc[i,0] = vdf.iloc[i,0] + vdf.iloc[i,2]
             vdf.iloc[i,2] = vdf.iloc[i,2]/2
         continue
-    cond1 = (abs(resultsMean[i]-targetMean)<0.01 and abs(resultsStd[i]-targetStd)<0.01)
-    cond2 = (vdf.iloc[i,2] <= 0.00000000000000005) and (vdf.iloc[i,3] <= 0.00000000000000005)
+    cond1 = (abs(resultsMean[i]-targetMean)<0.05 and abs(resultsStd[i]-targetStd)<0.05)
+    cond2 = False
     if cond1 or cond2:
         vdf.iloc[i,6] = 1
         vdf.iloc[i,4] = resultsMean[i]
@@ -97,7 +97,7 @@ for i in range(40):
         vdf.iloc[i,1] = 0
         vdf.iloc[i,3] = 0.001
     alldone = 0
-    
 vdf.to_csv('./required_files/Values.csv', index = False)
 if alldone:
     raise Exception("All done..")
+    

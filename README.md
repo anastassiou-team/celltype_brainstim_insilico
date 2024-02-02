@@ -33,9 +33,9 @@ https://celltypes.brain-map.org/data?donor__species=Mus%20musculus
 > https://celltypes.brain-map.org/experiment/morphology/471077857<br />
 > https://github.com/anastassiou-team/Nandi_EtAl_All-Active_Paper/tree/master/assets/mouse_models/471077857/hof_models
 
-> **Pyramidal A** ID: 314822529<br />
-> https://celltypes.brain-map.org/experiment/morphology/314822529<br />
-> https://github.com/anastassiou-team/Nandi_EtAl_All-Active_Paper/tree/master/assets/mouse_models/314822529/hof_models
+> **Pyramidal A** ID: 488698341<br />
+> https://celltypes.brain-map.org/experiment/morphology/488698341<br />
+> https://github.com/anastassiou-team/Nandi_EtAl_All-Active_Paper/tree/master/assets/mouse_models/488698341/hof_models
 
 > **Pyramidal B** ID: 354190013<br />
 > https://celltypes.brain-map.org/experiment/morphology/354190013<br />

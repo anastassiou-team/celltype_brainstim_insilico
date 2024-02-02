@@ -89,7 +89,7 @@ veclengctrl = pd.read_csv('../PyramidalA_8Hz_AllHOF/Results/yysC.csv')
 
 for r in range(len(spikrate)):
     for c in range(len(spikrate.T)):
-        if spikrate.iloc[r,c]>18:
+        if spikrate.iloc[r,c]>15:
             spikrate.iloc[r,c] = np.nan
             current.iloc[r,c] = np.nan
             veclengs.iloc[r,c] = np.nan
@@ -120,13 +120,13 @@ for binsize in range (2,3):
     
     fig, ax = plt.subplots(figsize=(7,2.8))
     for i in range(len(spikrate)):
-        Xvals = np.array(spikrate.iloc[i,:].dropna())[10:-20]
-        Yvals = np.array(veclengs.iloc[i,:].dropna())[10:-20]
+        Xvals = np.array(spikrate.iloc[i,:].dropna())
+        Yvals = np.array(veclengs.iloc[i,:].dropna())
         sort_index = np.argsort(Xvals)
         ax.plot(Xvals[sort_index],Yvals[sort_index], linewidth=0.5 , color = '#009B81',alpha = 0.3,label = None)
         
-        Xvals = np.array(spikrate.iloc[i,:].dropna())[10:-20]
-        Yvals = np.array(veclengctrl.iloc[i,:].dropna())[10:-20]
+        Xvals = np.array(spikrate.iloc[i,:].dropna())
+        Yvals = np.array(veclengctrl.iloc[i,:].dropna())
         sort_index = np.argsort(Xvals)
         ax.plot(Xvals[sort_index],Yvals[sort_index], linewidth=0.5 , c='deepskyblue',alpha = 0.3,label = None)
     ax.plot(xs2,ymed2,c='deepskyblue',label = 'Control', linewidth=2)
@@ -146,8 +146,9 @@ for binsize in range (2,3):
 
 fig, ax = plt.subplots(figsize=(7,2.8))
 for i in range(len(spikrate)):
-    ax.plot(current.iloc[i,:],spikrate.iloc[i,:], linewidth=0.5 , color = '#009B81',alpha = 0.6,label = None)
-ax.set_xlim(194,242)
+    if i!=5:
+        ax.plot(current.iloc[i,:],spikrate.iloc[i,:], linewidth=0.5 , color = '#009B81',alpha = 0.6,label = None)
+ax.set_xlim(165,200)
 ax.set_ylim(1.75,14.5)
 ax.set_ylabel("Spike frequency (Hz)", fontsize=14)
 ax.set_xlabel("Injected current (pA)", fontsize=14)

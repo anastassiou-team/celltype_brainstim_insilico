@@ -1,4 +1,4 @@
-BaseDir = "R:/Temp/Threads2/Thread0"
+BaseDir = "R:/Temp/Threads16/Thread0"
 MeanCurr = 0.150
 StdCurr = 0.150
 
@@ -26,6 +26,7 @@ import pandas as pd
 import numpy as np
 import efel
 from scipy.stats import norm
+import cell_functions
 
 print ("Started at "+str(datetime.datetime.now()))
 
@@ -35,7 +36,7 @@ net.add_nodes(cell_name=file_name,
               potental='exc',
               model_type='biophysical',
               model_template='ctdb:Biophys1.hoc',
-              model_processing='aibs_perisomatic',
+              model_processing='aibs_allactive_ani_directed',
               dynamics_params=file_name+'J_fixed.json',
               morphology=file_name+'_rotated.swc')
 
@@ -65,6 +66,7 @@ shutil.copyfile(BaseDir+'/neuronal_model/'+file_name+'J_fixed.json', BaseDir+'/S
 shutil.copyfile(BaseDir+'/neuronal_model/'+file_name+'_rotated.swc', BaseDir+'/Simulation/components/morphologies/'+file_name+'_rotated.swc')
 shutil.copyfile(BaseDir+'/neuronal_model/nrnmech.dll', BaseDir+'/Simulation/components/mechanisms/nrnmech.dll')
 
+    
 #Run simulation
 print ("Simulation started at "+str(datetime.datetime.now()))
 conf = bionet.Config.from_json(BaseDir+'/Simulation/config.json')

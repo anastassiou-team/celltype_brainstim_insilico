@@ -15,6 +15,8 @@ for i in range(40):
     shutil.copyfile('./required_files/neuronal_model/'+file_name.replace("J.json", "_rotated.swc"), base_name+'neuronal_model/Cell_rotated.swc')
     shutil.copyfile('./required_files/neuronal_model/hof_models_fixed/'+model_name+str(i)+'.json', base_name+'neuronal_model/CellJ_fixed.json')
     shutil.copyfile('./required_files/Simulation_(Main).py', base_name+'Simulation_(Main).py')
+    shutil.copyfile('./required_files/ais_functions.py', base_name+'ais_functions.py')
+    shutil.copyfile('./required_files/cell_functions.py', base_name+'cell_functions.py')
     shutil.copyfile('./required_files/neuronal_model/nrnmech.dll', base_name+'neuronal_model/nrnmech.dll')
     lines = []
     fin = open(base_name+'Simulation_(Main).py', "rt")

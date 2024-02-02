@@ -36,10 +36,10 @@ with h5py.File(sim_file1, "r") as f: #Read spike train file
 f.close()
 sf1 = pd.DataFrame(data)+15
 sf1['current'] = -150
-sf1['current'] = np.where(sf1.index>=10000, 350/10-150, sf1['current'])
-sf1['current'] = np.where(sf1.index>20000, -150, sf1['current'])
-sf1['time'] = sf1.index+190
-sf1 = sf1.iloc[9000:21500,:]
+sf1['current'] = np.where(sf1.index>=100000, 350/10-150, sf1['current'])
+sf1['current'] = np.where(sf1.index>200000, -150, sf1['current'])
+sf1['time'] = sf1.index+1900
+sf1 = sf1.iloc[90000:215000,:]
 
 with h5py.File(sim_file2, "r") as f: #Read spike train file
     rep = f['report']
@@ -48,18 +48,18 @@ with h5py.File(sim_file2, "r") as f: #Read spike train file
 f.close()
 sf2 = pd.DataFrame(data)+15
 sf2['current'] = -150
-sf2['current'] = np.where(sf2.index>=10000, 410/10-150, sf2['current'])
-sf2['current'] = np.where(sf2.index>20000, -150, sf2['current'])
-sf2['time'] = sf2.index+190+14000
-sf2 = sf2.iloc[9000:21500,:]
+sf2['current'] = np.where(sf2.index>=100000, 410/10-150, sf2['current'])
+sf2['current'] = np.where(sf2.index>200000, -150, sf2['current'])
+sf2['time'] = sf2.index+1900+140000
+sf2 = sf2.iloc[90000:215000,:]
 
 fig, ax = plt.subplots(figsize=(4,5))
 ax.plot(df1['time'],df1.iloc[:,0],color = 'deepskyblue', label = 'Experimental')
-ax.plot(sf1['time'],sf1.iloc[:,0],color = '#CD3449', label = 'Simulation')
-ax.plot(sf1['time'],sf1['current'],color = 'grey', label = 'Current')
+ax.plot(sf1['time']/10,sf1.iloc[:,0],color = '#CD3449', label = 'Simulation')
+ax.plot(sf1['time']/10,sf1['current'],color = 'grey', label = 'Current')
 ax.plot(df2['time'],df2.iloc[:,0],color = 'deepskyblue', label = 'Experimental')
-ax.plot(sf2['time'],sf2.iloc[:,0],color = '#CD3449', label = 'Simulation')
-ax.plot(sf2['time'],sf2['current'],color = 'grey', label = 'Current')
+ax.plot(sf2['time']/10,sf2.iloc[:,0],color = '#CD3449', label = 'Simulation')
+ax.plot(sf2['time']/10,sf2['current'],color = 'grey', label = 'Current')
 ax.set_ylim(-160,200)
 ax.set_xlim(9000,37000)
 ax.set_ylabel("PVALB_A", fontsize = 10)
@@ -69,9 +69,9 @@ ax.text(35500, -54,'25 mV',rotation=90, fontsize = 8.6)
 rect = matplotlib.patches.Rectangle((34800, -55), 250, 25, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
 ax.text(35500, -139,'250 pA',rotation=90, fontsize = 8.6)
-rect = matplotlib.patches.Rectangle((30750, -141), 2500, 2.5, linewidth=1, edgecolor='k', facecolor='k')
+rect = matplotlib.patches.Rectangle((30200, -141), 2500, 2.5, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
-ax.text(30350, -152,'250 ms', fontsize = 9)
+ax.text(29500, -152,'250 ms', fontsize = 9)
 fig.tight_layout()
 gg.savefig(fig)
 
@@ -103,10 +103,10 @@ with h5py.File(sim_file1, "r") as f: #Read spike train file
 f.close()
 sf1 = pd.DataFrame(data)+15
 sf1['current'] = -150
-sf1['current'] = np.where(sf1.index>=10000, 450/10-150, sf1['current'])
-sf1['current'] = np.where(sf1.index>20000, -150, sf1['current'])
-sf1['time'] = sf1.index+190
-sf1 = sf1.iloc[9000:21500,:]
+sf1['current'] = np.where(sf1.index>=100000, 450/10-150, sf1['current'])
+sf1['current'] = np.where(sf1.index>200000, -150, sf1['current'])
+sf1['time'] = sf1.index+1900
+sf1 = sf1.iloc[90000:215000,:]
 
 with h5py.File(sim_file2, "r") as f: #Read spike train file
     rep = f['report']
@@ -115,18 +115,18 @@ with h5py.File(sim_file2, "r") as f: #Read spike train file
 f.close()
 sf2 = pd.DataFrame(data)+15
 sf2['current'] = -150
-sf2['current'] = np.where(sf2.index>=10000, 510/10-150, sf2['current'])
-sf2['current'] = np.where(sf2.index>20000, -150, sf2['current'])
-sf2['time'] = sf2.index+190+14000
-sf2 = sf2.iloc[9000:21500,:]
+sf2['current'] = np.where(sf2.index>=100000, 510/10-150, sf2['current'])
+sf2['current'] = np.where(sf2.index>200000, -150, sf2['current'])
+sf2['time'] = sf2.index+1900+140000
+sf2 = sf2.iloc[90000:215000,:]
 
 fig, ax = plt.subplots(figsize=(4,5))
 ax.plot(df1['time'],df1.iloc[:,0],color = 'deepskyblue', label = 'Experimental')
-ax.plot(sf1['time'],sf1.iloc[:,0],color = '#CD3449', label = 'Simulation')
-ax.plot(sf1['time'],sf1['current'],color = 'grey', label = 'Current')
+ax.plot(sf1['time']/10,sf1.iloc[:,0],color = '#CD3449', label = 'Simulation')
+ax.plot(sf1['time']/10,sf1['current'],color = 'grey', label = 'Current')
 ax.plot(df2['time'],df2.iloc[:,0],color = 'deepskyblue', label = 'Experimental')
-ax.plot(sf2['time'],sf2.iloc[:,0],color = '#CD3449', label = 'Simulation')
-ax.plot(sf2['time'],sf2['current'],color = 'grey', label = 'Current')
+ax.plot(sf2['time']/10,sf2.iloc[:,0],color = '#CD3449', label = 'Simulation')
+ax.plot(sf2['time']/10,sf2['current'],color = 'grey', label = 'Current')
 ax.set_ylim(-160,200)
 ax.set_xlim(9000,37000)
 ax.set_ylabel("PVALB_B", fontsize = 10)
@@ -136,22 +136,22 @@ ax.text(35500, -54,'25 mV',rotation=90, fontsize = 8.6)
 rect = matplotlib.patches.Rectangle((34800, -55), 250, 25, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
 ax.text(35500, -139,'250 pA',rotation=90, fontsize = 8.6)
-rect = matplotlib.patches.Rectangle((30750, -141), 2500, 2.5, linewidth=1, edgecolor='k', facecolor='k')
+rect = matplotlib.patches.Rectangle((30200, -141), 2500, 2.5, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
-ax.text(30350, -152,'250 ms', fontsize = 9)
+ax.text(29500, -152,'250 ms', fontsize = 9)
 fig.tight_layout()
 gg.savefig(fig)
 
 #PYRAMA
-nwb_file = '../PyramidalA/1_Supplemental/314822527_ephys.nwb'
+nwb_file = '../PyramidalA/1_Supplemental/488698339_ephys.nwb'
 
 with h5py.File(nwb_file, "r") as f: #Read spike train file
     acq = f['acquisition']
     timeser = acq['timeseries'] #Depends on network name (NetworkBuilder BMTK)
-    sw50 = timeser['Sweep_50']
-    data1=sw50['data'][()]
-    sw54 = timeser['Sweep_54']
-    data2=sw54['data'][()]
+    sw44 = timeser['Sweep_44']
+    data1=sw44['data'][()]
+    sw47 = timeser['Sweep_47']
+    data2=sw47['data'][()]
 f.close()
 df1 = pd.DataFrame(data1)*1000+100
 df1['time'] = df1.index/20
@@ -171,10 +171,10 @@ with h5py.File(sim_file1, "r") as f: #Read spike train file
 f.close()
 sf1 = pd.DataFrame(data)+15
 sf1['current'] = -150
-sf1['current'] = np.where(sf1.index>=10000, 250/10-150, sf1['current'])
-sf1['current'] = np.where(sf1.index>20000, -150, sf1['current'])
-sf1['time'] = sf1.index+190
-sf1 = sf1.iloc[9000:21500,:]
+sf1['current'] = np.where(sf1.index>=100000, 190/10-150, sf1['current'])
+sf1['current'] = np.where(sf1.index>200000, -150, sf1['current'])
+sf1['time'] = sf1.index+1900
+sf1 = sf1.iloc[90000:215000,:]
 
 with h5py.File(sim_file2, "r") as f: #Read spike train file
     rep = f['report']
@@ -183,30 +183,30 @@ with h5py.File(sim_file2, "r") as f: #Read spike train file
 f.close()
 sf2 = pd.DataFrame(data)+15
 sf2['current'] = -150
-sf2['current'] = np.where(sf2.index>=10000, 330/10-150, sf2['current'])
-sf2['current'] = np.where(sf2.index>20000, -150, sf2['current'])
-sf2['time'] = sf2.index+190+14000
-sf2 = sf2.iloc[9000:21500,:]
+sf2['current'] = np.where(sf2.index>=100000, 250/10-150, sf2['current'])
+sf2['current'] = np.where(sf2.index>200000, -150, sf2['current'])
+sf2['time'] = sf2.index+1900+140000
+sf2 = sf2.iloc[90000:215000,:]
 
 fig, ax = plt.subplots(figsize=(4,5))
 ax.plot(df1['time'],df1.iloc[:,0],color = 'deepskyblue', label = 'Experimental')
-ax.plot(sf1['time'],sf1.iloc[:,0],color = '#009B81', label = 'Simulation')
-ax.plot(sf1['time'],sf1['current'],color = 'grey', label = 'Current')
+ax.plot(sf1['time']/10,sf1.iloc[:,0],color = '#009B81', label = 'Simulation')
+ax.plot(sf1['time']/10,sf1['current'],color = 'grey', label = 'Current')
 ax.plot(df2['time'],df2.iloc[:,0],color = 'deepskyblue', label = 'Experimental')
-ax.plot(sf2['time'],sf2.iloc[:,0],color = '#009B81', label = 'Simulation')
-ax.plot(sf2['time'],sf2['current'],color = 'grey', label = 'Current')
+ax.plot(sf2['time']/10,sf2.iloc[:,0],color = '#009B81', label = 'Simulation')
+ax.plot(sf2['time']/10,sf2['current'],color = 'grey', label = 'Current')
 ax.set_ylim(-160,200)
 ax.set_xlim(9000,37000)
-ax.set_ylabel("PYRAM_A", fontsize = 10)
+ax.set_ylabel("PYRAM_B", fontsize = 10)
 rect = matplotlib.patches.Rectangle((34800, -140), 250, 25, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
 ax.text(35500, -54,'25 mV',rotation=90, fontsize = 8.6)
 rect = matplotlib.patches.Rectangle((34800, -55), 250, 25, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
 ax.text(35500, -139,'250 pA',rotation=90, fontsize = 8.6)
-rect = matplotlib.patches.Rectangle((30750, -141), 2500, 2.5, linewidth=1, edgecolor='k', facecolor='k')
+rect = matplotlib.patches.Rectangle((30200, -141), 2500, 2.5, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
-ax.text(30350, -152,'250 ms', fontsize = 9)
+ax.text(29500, -152,'250 ms', fontsize = 9)
 fig.tight_layout()
 gg.savefig(fig)
 
@@ -239,10 +239,10 @@ with h5py.File(sim_file1, "r") as f: #Read spike train file
 f.close()
 sf1 = pd.DataFrame(data)+15
 sf1['current'] = -150
-sf1['current'] = np.where(sf1.index>=10000, 210/10-150, sf1['current'])
-sf1['current'] = np.where(sf1.index>20000, -150, sf1['current'])
-sf1['time'] = sf1.index+190
-sf1 = sf1.iloc[9000:21500,:]
+sf1['current'] = np.where(sf1.index>=100000, 210/10-150, sf1['current'])
+sf1['current'] = np.where(sf1.index>200000, -150, sf1['current'])
+sf1['time'] = sf1.index+1900
+sf1 = sf1.iloc[90000:215000,:]
 
 with h5py.File(sim_file2, "r") as f: #Read spike train file
     rep = f['report']
@@ -251,18 +251,18 @@ with h5py.File(sim_file2, "r") as f: #Read spike train file
 f.close()
 sf2 = pd.DataFrame(data)+15
 sf2['current'] = -150
-sf2['current'] = np.where(sf2.index>=10000, 270/10-150, sf2['current'])
-sf2['current'] = np.where(sf2.index>20000, -150, sf2['current'])
-sf2['time'] = sf2.index+190+14000
-sf2 = sf2.iloc[9000:21500,:]
+sf2['current'] = np.where(sf2.index>=100000, 270/10-150, sf2['current'])
+sf2['current'] = np.where(sf2.index>200000, -150, sf2['current'])
+sf2['time'] = sf2.index+1900+140000
+sf2 = sf2.iloc[90000:215000,:]
 
 fig, ax = plt.subplots(figsize=(4,5))
 ax.plot(df1['time'],df1.iloc[:,0],color = 'deepskyblue', label = 'Experimental')
-ax.plot(sf1['time'],sf1.iloc[:,0],color = '#009B81', label = 'Simulation')
-ax.plot(sf1['time'],sf1['current'],color = 'grey', label = 'Current')
+ax.plot(sf1['time']/10,sf1.iloc[:,0],color = '#009B81', label = 'Simulation')
+ax.plot(sf1['time']/10,sf1['current'],color = 'grey', label = 'Current')
 ax.plot(df2['time'],df2.iloc[:,0],color = 'deepskyblue', label = 'Experimental')
-ax.plot(sf2['time'],sf2.iloc[:,0],color = '#009B81', label = 'Simulation')
-ax.plot(sf2['time'],sf2['current'],color = 'grey', label = 'Current')
+ax.plot(sf2['time']/10,sf2.iloc[:,0],color = '#009B81', label = 'Simulation')
+ax.plot(sf2['time']/10,sf2['current'],color = 'grey', label = 'Current')
 ax.set_ylim(-160,200)
 ax.set_xlim(9000,37000)
 ax.set_ylabel("PYRAM_B", fontsize = 10)
@@ -272,9 +272,9 @@ ax.text(35500, -54,'25 mV',rotation=90, fontsize = 8.6)
 rect = matplotlib.patches.Rectangle((34800, -55), 250, 25, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
 ax.text(35500, -139,'250 pA',rotation=90, fontsize = 8.6)
-rect = matplotlib.patches.Rectangle((30750, -141), 2500, 2.5, linewidth=1, edgecolor='k', facecolor='k')
+rect = matplotlib.patches.Rectangle((30200, -141), 2500, 2.5, linewidth=1, edgecolor='k', facecolor='k')
 ax.add_patch(rect)
-ax.text(30350, -152,'250 ms', fontsize = 9)
+ax.text(29500, -152,'250 ms', fontsize = 9)
 fig.tight_layout()
 gg.savefig(fig)
 

@@ -7,7 +7,7 @@ import pandas as pd
 resultsMean = []
 resultsStd = []
 for i in range(40):
-    base_name = 'R:/Temp/Threads1/Thread'+str(i)+'/Simulation/output/Data.csv'
+    base_name = 'R:/Temp/Threads10/Thread'+str(i)+'/Simulation/output/Data.csv'
     df = pd.read_csv(base_name)
     if df.iloc[0,0]>1000:
         resultsMean.append(0)

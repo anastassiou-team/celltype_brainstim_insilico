@@ -10,12 +10,18 @@ at_least = 0
 values = []
 names = []
 for i in range(threads):
-    base_name = 'R:/Temp/Threads1/Thread'+str(i)+'/Simulation/output/InData.csv'
+    base_name = 'R:/Temp/Threads13/Thread'+str(i)+'/Simulation/output/InData.csv'
     if os.path.exists(base_name):
         at_least = 1
-        df = pd.read_csv(base_name)
-        values.append(df.iloc[:,0])
-        names.append(clmns[i])
+        try:
+            df = pd.read_csv(base_name)
+            values.append(df.iloc[:,0])
+            names.append(clmns[i])
+        except:
+            print(i)
+            df = pd.DataFrame([0,0,0])
+            values.append(df.iloc[:,0])
+            names.append(clmns[i])
 if at_least:
     if 'Control' not in idf:
         values.append(df.iloc[:,-2])

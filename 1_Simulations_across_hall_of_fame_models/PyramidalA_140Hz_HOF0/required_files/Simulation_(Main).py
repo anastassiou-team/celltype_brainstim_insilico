@@ -3,8 +3,8 @@ InnCurr = 150
 import sys
 
 file_name = 'Cell'
-probeXs = [50] #um
-probeYs = [0] #um
+probeXs = [0] #um
+probeYs = [50] #um
 frequencies = [140] #Hz
 ampltudes = [0.0002, 0] #Hz
 DCampltudes = [0.25, 0.35, 0.45, 0.55, 0.65] #Hz
@@ -47,6 +47,7 @@ from bmtk.simulator import bionet
 import os, re, shutil, datetime, h5py
 import pandas as pd
 import numpy as np
+import cell_functions
 
 print ("Started at "+str(datetime.datetime.now()))
 
@@ -56,7 +57,7 @@ net.add_nodes(cell_name=file_name,
               potental='exc',
               model_type='biophysical',
               model_template='ctdb:Biophys1.hoc',
-              model_processing='aibs_perisomatic',
+              model_processing='aibs_allactive_ani_directed',
               dynamics_params=file_name+'J_fixed.json',
               morphology=file_name+'_rotated.swc')
 

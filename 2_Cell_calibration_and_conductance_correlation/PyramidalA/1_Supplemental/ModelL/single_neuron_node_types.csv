@@ -1,2 +1,2 @@
-node_type_id model_template dynamics_params potental model_type morphology cell_name model_processing
-100 ctdb:Biophys1.hoc hof_param_314822529_0.json exc biophysical Cell_rotated.swc Cell_314822527 aibs_perisomatic
+node_type_id model_processing dynamics_params morphology model_template model_type cell_name potental
+100 aibs_allactive_ani_directed hof_param_488698341_0.json Cell_rotated.swc ctdb:Biophys1.hoc biophysical Cell_488698341 exc

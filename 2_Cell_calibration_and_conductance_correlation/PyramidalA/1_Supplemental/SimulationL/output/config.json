@@ -1,23 +1,23 @@
 {
-  "network": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\circuit_config.json",
-  "simulation": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\simulation_config.json",
-  "config_path": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\config.json",
-  "config_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL",
+  "network": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\circuit_config.json",
+  "simulation": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\simulation_config.json",
+  "config_path": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\config.json",
+  "config_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL",
   "components": {
-    "biophysical_neuron_models_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\components\\biophysical_neuron_models",
-    "filter_models_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\components\\filter_models",
-    "mechanisms_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\components\\mechanisms",
-    "morphologies_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\components\\morphologies",
-    "point_neuron_models_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\components\\point_neuron_models",
-    "synaptic_models_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\components\\synaptic_models",
-    "templates_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\components\\templates",
-    "__pycache___dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\components\\__pycache__"
+    "biophysical_neuron_models_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\components\\biophysical_neuron_models",
+    "filter_models_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\components\\filter_models",
+    "mechanisms_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\components\\mechanisms",
+    "morphologies_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\components\\morphologies",
+    "point_neuron_models_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\components\\point_neuron_models",
+    "synaptic_models_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\components\\synaptic_models",
+    "templates_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\components\\templates",
+    "__pycache___dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\components\\__pycache__"
   },
   "networks": {
     "nodes": [
       {
-        "nodes_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\ModelL\\single_neuron_nodes.h5",
-        "node_types_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\ModelL\\single_neuron_node_types.csv"
+        "nodes_file": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\ModelL\\single_neuron_nodes.h5",
+        "node_types_file": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\ModelL\\single_neuron_node_types.csv"
       }
     ],
     "edges": [],
@@ -27,7 +27,7 @@
   "run": {
     "tstart": 0.0,
     "tstop": 4000.0,
-    "dt": 0.1,
+    "dt": 0.01,
     "dL": 20.0,
     "spike_threshold": -15.0,
     "nsteps_block": 5000
@@ -42,15 +42,15 @@
       "module": "IClamp",
       "node_set": "all",
       "gids": "all",
-      "amp": 0.25,
+      "amp": 0.19,
       "delay": 1000.0,
       "duration": 1000.0
     }
   },
   "output": {
-    "log_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\output\\log.txt",
-    "output_dir": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\output",
-    "spikes_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\output\\spikes.h5"
+    "log_file": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\output\\log.txt",
+    "output_dir": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\output",
+    "spikes_file": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\output\\spikes.h5"
   },
   "reports": {
     "v_report": {
@@ -66,7 +66,7 @@
       "sections": "soma"
     }
   },
-  "node_sets_file": "C:\\Users\\Koza\\Desktop\\SooCleanGit\\2_Cell_calibration_and_conductance_correlation\\PyramidalA\\1_Supplemental\\SimulationL\\node_sets.json",
+  "node_sets_file": "C:\\Users\\Koza\\Desktop\\celltype_brainstim_insilico\\2_Cell_calibration_and_conductance_correlation\\PyramidalD\\1_Supplemental\\SimulationL\\node_sets.json",
   "node_sets": {
     "biophysical_nodes": {
       "model_type": "biophysical"

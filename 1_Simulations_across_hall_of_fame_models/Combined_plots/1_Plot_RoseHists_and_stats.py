@@ -202,7 +202,10 @@ pvb.append(listC[2])
 ppv = [np.mean(listD)]
 ppv.append(listE[0])
 ppv.append(listE[1])
-ppv.append(listE[2])
+if listE[2]>150:
+    ppv.append(150)
+else:
+    ppv.append(listE[2])
 
 stv = []
 for i in range(len(ppv)):
@@ -267,10 +270,12 @@ for pth in range(len(paths1)):
     result.append("Current")
     results.append(result)
     CoISI=[]
-    for cnt in range(194,195,48):
+    for cnt in range(146,242,48):
         en=pd.read_csv('../'+paths1[pth]+'/Results/Entrain_'+str(cnt)+'_'+str(hof)+'.csv')
         co=pd.read_csv('../'+paths1[pth]+'/Results/Control_'+str(cnt)+'_'+str(hof)+'.csv')
         for i, cl in enumerate(co.columns):
+            if int(cl)<190 or int(cl)>215:
+                continue
             thrs = co.loc[rangesL[signalInd]*2:len(co)+rangesH[signalInd]*2,cl]
             thrs = (thrs.max()-thrs.min())/2+thrs.min()
             print(thrs)
@@ -449,7 +454,7 @@ ax.set_xlabel('ES Frequency (Hz)', fontsize=14)
 ax.set_ylabel('Vector length', fontsize=14)
 ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)
-ax.set_ylim(0,0.35)
+ax.set_ylim(0,0.4)
 plt.legend(frameon=False,loc='upper left', prop={'size': 12})
 fig.tight_layout()
 pp.savefig(fig)

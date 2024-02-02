@@ -1,12 +1,12 @@
-BaseDir = "R:/Temp/Threads1/Thread0"
+BaseDir = "R:/Temp/Threads13/Thread0"
 InnCurr = 150
 MeanCurr = 150
 
 import sys
 
 file_name = 'Cell'
-probeXs = [50] #um
-probeYs = [0] #um
+probeXs = [0] #um
+probeYs = [50] #um
 frequencies = [8] #Hz
 ampltudes = [0.0002, 0] #Hz
 DCampltudes = [0.25, 0.35, 0.45, 0.55, 0.65] #Hz
@@ -49,6 +49,7 @@ from bmtk.simulator import bionet
 import os, re, shutil, datetime, h5py
 import pandas as pd
 import numpy as np
+import cell_functions
 
 print ("Started at "+str(datetime.datetime.now()))
 
@@ -58,7 +59,7 @@ net.add_nodes(cell_name=file_name,
               potental='exc',
               model_type='biophysical',
               model_template='ctdb:Biophys1.hoc',
-              model_processing='aibs_perisomatic',
+              model_processing='aibs_allactive_ani_directed',
               dynamics_params=file_name+'J_fixed.json',
               morphology=file_name+'_rotated.swc')
 
@@ -115,13 +116,7 @@ filedata=re.sub('"inputs": {.*?},','"inputs": {\n    \
 }\n  \
 },',filedata, flags=re.DOTALL)
 
-#Replace calcium report with vd (dendrites) reports within reports section
-filedata=re.sub('"cai_report": {.*?}','"v_dend": {\n      \
-"variable_name": "v",\n      \
-"cells": "all",\n      \
-"module": "membrane_report",\n      \
-"sections": "dend"\n    \
-}',filedata, flags=re.DOTALL)
+
 f = open(sim_file,'w')
 f.write(filedata)
 f.close()

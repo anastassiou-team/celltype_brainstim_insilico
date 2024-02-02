@@ -947,7 +947,7 @@ for hof in range(1):
             results.append(result)
             vls.append(round(mean_vector_length,3))
 
-model = 'hof_param_314822529_'
+model = 'hof_param_488698341_'
     
 vls = pd.DataFrame(vls)
 valus = pd.read_csv('../PyramidalA/3_Correlate/required_files/Values.csv')
@@ -1012,13 +1012,13 @@ for ii, name in enumerate(range(40)):
             elif "ena" in line:
                 values.append(float(line.split(":")[1].split(",")[0]))
                 ena = 1
-            elif ena == 1:
+            elif ena == 2:
                 titles.append("ena_"+line.split(":")[1].split('"')[1])
                 titles.append("ek_"+line.split(":")[1].split('"')[1])
-                ena = 2
-            elif ena == 2:
-                values.append(float(line.split(":")[1].split(",")[0]))
                 ena = 0
+            elif ena == 1:
+                values.append(float(line.split(":")[1].split(",")[0]))
+                ena = 2
             elif "v_init" in line:
                 titles.append("v_init")
                 values.append(float(line.split(":")[1]))
@@ -1086,13 +1086,13 @@ for ii in range(0,40):
             elif "ena" in line:
                 values.append(float(line.split(":")[1].split(",")[0]))
                 ena = 1
-            elif ena == 1:
+            elif ena == 2:
                 titles.append("ena_"+line.split(":")[1].split('"')[1])
                 titles.append("ek_"+line.split(":")[1].split('"')[1])
-                ena = 2
-            elif ena == 2:
-                values.append(float(line.split(":")[1].split(",")[0]))
                 ena = 0
+            elif ena == 1:
+                values.append(float(line.split(":")[1].split(",")[0]))
+                ena = 2
             elif "v_init" in line:
                 titles.append("v_init")
                 values.append(float(line.split(":")[1]))
@@ -1135,6 +1135,7 @@ strings2 = sorted(sorted(a.columns[2:]), key=lambda x: x[-4:], reverse=True)
 strings = [j for i in [strings1, strings2] for j in i] 
 a = a[strings]
 a = a.rename(columns={'Width': 'Entrainment\n(vector length)'})
+a = a.dropna()
 crl = a.corr().iloc[2:,1:2].dropna()
 crl['pval'] = calculate_pvalues(a)
 
@@ -1341,7 +1342,7 @@ for i in range (len(vls)):
 pp = PdfPages('./1_Vector_lengthsPYB.pdf')
 
 fig, ax = plt.subplots(figsize=(3.5,2.8))
-ax.plot(np.arange(40),(vls),'o',color = "#009B81")
+ax.plot(np.arange(39),(vls),'o',color = "#009B81")
 ax.set_xlim(-0.95,40)
 ax.set_xlabel("HOF model #", fontsize=14)
 ax.set_xticks(np.linspace(0,40,11))
@@ -1355,7 +1356,7 @@ pp.close()
 #Gather conductance values
 rows = []
 first_run = 1
-for ii, name in enumerate(range(40)):
+for ii, name in enumerate(range(39)):
     inFile = "../PyramidalB/3_Correlate/required_files/neuronal_model/hof_models_fixed/" + model + str(name) + ".json"
     fin = open(inFile, "rt")
    

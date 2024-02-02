@@ -40,6 +40,7 @@ extern void _Nap_reg();
 extern void _Nap_Et2_reg();
 extern void _SK_reg();
 extern void _SK2_gc_reg();
+extern void _ingauss_reg();
 extern void _na8st_gc_reg();
 
 void modl_reg(){
@@ -84,6 +85,7 @@ fprintf(stderr," Nap.mod");
 fprintf(stderr," Nap_Et2.mod");
 fprintf(stderr," SK.mod");
 fprintf(stderr," SK2_gc.mod");
+fprintf(stderr," ingauss.mod");
 fprintf(stderr," na8st_gc.mod");
 fprintf(stderr, "\n");
     }
@@ -124,5 +126,6 @@ _Nap_reg();
 _Nap_Et2_reg();
 _SK_reg();
 _SK2_gc_reg();
+_ingauss_reg();
 _na8st_gc_reg();
 }

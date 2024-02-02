@@ -28,7 +28,7 @@ for hof in range(0,1):
     result.append("Spike rate")
     result.append("Current")
     results.append(result)
-    for cnt in range(50,1000,48):
+    for cnt in range(50,500,48):
         en=pd.read_csv('../Results/Entrain_'+str(cnt)+'_'+str(hof)+'.csv')
         co=pd.read_csv('../Results/Control_'+str(cnt)+'_'+str(hof)+'.csv')
         for i, cl in enumerate(co.columns):

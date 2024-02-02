@@ -26,6 +26,7 @@ import pandas as pd
 import numpy as np
 import efel
 from scipy.stats import norm
+import cell_functions
 
 print ("Started at "+str(datetime.datetime.now()))
 
@@ -35,7 +36,7 @@ net.add_nodes(cell_name=file_name,
               potental='exc',
               model_type='biophysical',
               model_template='ctdb:Biophys1.hoc',
-              model_processing='aibs_perisomatic',
+              model_processing='aibs_allactive_ani_directed',
               dynamics_params=file_name+'J_fixed.json',
               morphology=file_name+'_rotated.swc')
 

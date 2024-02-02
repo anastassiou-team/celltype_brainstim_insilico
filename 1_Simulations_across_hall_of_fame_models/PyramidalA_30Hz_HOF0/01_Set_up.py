@@ -66,7 +66,7 @@ pp.savefig(fig)
 pp.close()
 
 #Set up Json files
-inFile = "./required_files/neuronal_model/hof_param_314822529_" + sys.argv[2]+".json"
+inFile = "./required_files/neuronal_model/hof_param_488698341_" + sys.argv[2]+".json"
 outFile = "./required_files/neuronal_model/" + file_name.replace(".json","_fixed.json")
 
 #Read Cm, Epas and Ra values
@@ -187,6 +187,8 @@ for i in range(0,16):
     shutil.copyfile('./required_files/neuronal_model/'+file_name.replace("J.json", "_rotated.swc"), base_name+'neuronal_model/Cell_rotated.swc')
     shutil.copyfile('./required_files/neuronal_model/'+file_name.replace(".json","_fixed.json"), base_name+'neuronal_model/CellJ_fixed.json')
     shutil.copyfile('./required_files/Simulation_(Main).py', base_name+'Simulation_(Main).py')
+    shutil.copyfile('./required_files/cell_functions.py', base_name+'cell_functions.py')
+    shutil.copyfile('./required_files/ais_functions.py', base_name+'ais_functions.py')
     shutil.copytree('./required_files/neuronal_model/modfiles',base_name+'neuronal_model/modfiles')
     shutil.copyfile('./required_files/neuronal_model/nrnmech.dll', base_name+'neuronal_model/nrnmech.dll')
     lines = []

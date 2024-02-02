@@ -7,7 +7,7 @@
   "run": {
     "tstart": 0.0,
     "tstop": 4000.0,
-    "dt": 0.1,
+    "dt": 0.01,
     "dL": 20.0,
     "spike_threshold": -15.0,
     "nsteps_block": 5000
@@ -22,7 +22,7 @@
       "module": "IClamp",
       "node_set": "all",
       "gids": "all",
-      "amp": 0.33,
+      "amp": 0.25,
       "delay": 1000.0,
       "duration": 1000.0
     }

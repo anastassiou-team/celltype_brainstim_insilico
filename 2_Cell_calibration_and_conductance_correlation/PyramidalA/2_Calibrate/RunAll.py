@@ -12,7 +12,7 @@ for stp in range(1000):
 
     processes = []
     for j in range(40):
-        comnd = ["python", "R:/Temp/Threads2/Thread"+str(j)+"/Simulation_(Main).py"]
+        comnd = ["python", "R:/Temp/Threads16/Thread"+str(j)+"/Simulation_(Main).py"]
         p = subprocess.Popen(comnd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         processes.append(p)           
     for p in processes:

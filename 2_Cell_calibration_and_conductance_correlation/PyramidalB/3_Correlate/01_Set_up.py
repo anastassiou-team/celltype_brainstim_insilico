@@ -7,7 +7,7 @@ import pandas as pd
 valus = pd.read_csv('./required_files/Values.csv')
 
 #Create threads
-os.mkdir('R:/Temp/Threads1/')
+os.mkdir('R:/Temp/Threads13/')
 for hof in range(0,40):
     #Set up Json files
     inFile = "./required_files/neuronal_model/" + model + str(hof) +".json"
@@ -115,12 +115,14 @@ for hof in range(0,40):
     fin.close()
     fout.close()
     
-    base_name = 'R:/Temp/Threads1/Thread'+str(hof)+'/'
+    base_name = 'R:/Temp/Threads13/Thread'+str(hof)+'/'
     os.mkdir(base_name)
     os.mkdir(base_name+'neuronal_model/')
     shutil.copyfile('./required_files/neuronal_model/'+file_name.replace("J.json", "_rotated.swc"), base_name+'neuronal_model/Cell_rotated.swc')
     shutil.copyfile('./required_files/neuronal_model/'+file_name.replace(".json","_fixed.json"), base_name+'neuronal_model/CellJ_fixed.json')
     shutil.copyfile('./required_files/Simulation_(Main).py', base_name+'Simulation_(Main).py')
+    shutil.copyfile('./required_files/ais_functions.py', base_name+'ais_functions.py')
+    shutil.copyfile('./required_files/cell_functions.py', base_name+'cell_functions.py')
     shutil.copytree('./required_files/neuronal_model/modfiles',base_name+'neuronal_model/modfiles')
     shutil.copyfile('./required_files/neuronal_model/nrnmech.dll', base_name+'neuronal_model/nrnmech.dll')
     lines = []
@@ -128,7 +130,7 @@ for hof in range(0,40):
     cnt = 0
     for line in fin:
         if cnt == 0:
-            lines.append('BaseDir = "R:/Temp/Threads1/Thread'+str(hof)+'"\n')
+            lines.append('BaseDir = "R:/Temp/Threads13/Thread'+str(hof)+'"\n')
         elif cnt == 1:
             lines.append('InnCurr = '+str(valus.iloc[hof,0])+'\n')
         elif cnt == 2:

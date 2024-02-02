@@ -1,11 +1,12 @@
 from bmtk.builder.networks import NetworkBuilder
+import cell_functions
 
 net = NetworkBuilder('single_neuron')
 net.add_nodes(cell_name='Cell_471077857',
               potental='exc',
               model_type='biophysical',
               model_template='ctdb:Biophys1.hoc',
-              model_processing='aibs_perisomatic',
+              model_processing='aibs_allactive_ani_directed',
               dynamics_params='hof_param_471077857_0.json',
               morphology='Cell_rotated.swc')
 
@@ -18,7 +19,7 @@ build_env_bionet(
     base_dir='SimulationL',
     config_file='config.json',
     network_dir='ModelL',
-    tstop=4000.0, dt=0.1,
+    tstop=4000.0, dt=0.01,
     report_vars=['v', 'cai'],
     current_clamp={
         'amp': 0.450,
