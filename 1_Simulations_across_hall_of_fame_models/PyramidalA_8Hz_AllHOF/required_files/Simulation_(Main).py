@@ -154,7 +154,7 @@ cell = sim.net.get_cell_gid(0)
 ig = sim.h.InGauss(cell._secs[0](0.5))
 ig.delay=Idel
 ig.dur=Idur
-ig.stdev=0.065
+ig.stdev=0.125
 ig.mean=0.0
 sim._iclamps.append(ig)
 

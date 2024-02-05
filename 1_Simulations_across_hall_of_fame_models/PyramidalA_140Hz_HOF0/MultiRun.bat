@@ -1,7 +1,7 @@
 @ECHO OFF
 
 for /l %%h in (0, 1, 0) do (
-    for /l %%d in (50, 48, 500) do (
+    for /l %%d in (50, 48, 1000) do (
         python  "01_Set_up.py" %%d %%h
         (
             start python  "R:/Temp/Threads6/Thread0/Simulation_(Main).py" 0

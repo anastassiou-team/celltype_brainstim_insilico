@@ -274,7 +274,7 @@ for pth in range(len(paths1)):
         en=pd.read_csv('../'+paths1[pth]+'/Results/Entrain_'+str(cnt)+'_'+str(hof)+'.csv')
         co=pd.read_csv('../'+paths1[pth]+'/Results/Control_'+str(cnt)+'_'+str(hof)+'.csv')
         for i, cl in enumerate(co.columns):
-            if int(cl)<190 or int(cl)>215:
+            if int(cl)<190 or int(cl)>220:
                 continue
             thrs = co.loc[rangesL[signalInd]*2:len(co)+rangesH[signalInd]*2,cl]
             thrs = (thrs.max()-thrs.min())/2+thrs.min()
@@ -454,7 +454,7 @@ ax.set_xlabel('ES Frequency (Hz)', fontsize=14)
 ax.set_ylabel('Vector length', fontsize=14)
 ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)
-ax.set_ylim(0,0.4)
+ax.set_ylim(0,0.35)
 plt.legend(frameon=False,loc='upper left', prop={'size': 12})
 fig.tight_layout()
 pp.savefig(fig)
