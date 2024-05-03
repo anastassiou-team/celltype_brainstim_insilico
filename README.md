@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/738687636.svg)](https://zenodo.org/doi/10.5281/zenodo.11111562)
+
 #### *Results and algorithms for computational investigation presented in:*
 # "Cell class-specific electric field entrainment of neural activity"
 
